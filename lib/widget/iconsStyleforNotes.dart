@@ -2,18 +2,17 @@ import 'package:flutter/material.dart';
 
 import '../Component/IconsClass.dart';
 
-class IconsStyle extends StatelessWidget {
+class IconsStyleCardNotes extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 130,
-      alignment: Alignment.center,
+      height: 100,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          CustomIcons.addIcon(),
-          CustomIcons.archiveIcon(),
-          CustomIcons.searchIcon(),
+          CustomIcons.inprocessIcon(),
+          CustomIcons.cancelIcon(),
+          CustomIcons.doneIcon(),
         ],
       ),
     );
