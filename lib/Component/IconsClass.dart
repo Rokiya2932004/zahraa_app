@@ -1,9 +1,17 @@
+
 import 'package:flutter/material.dart';
 
+import 'AddCustomerFunction.dart';
+
 class CustomIcons {
-  static IconButton addIcon() {
+  void _showDialog( BuildContext context){
+    showCustomAddDialog(context);
+  }
+   IconButton addIcon(BuildContext context) {
     return IconButton(
-      onPressed: () {},
+      onPressed: () {
+        _showDialog(context);
+      },
       icon: Image.asset('assets/icons/add icon.png'),
       iconSize:1 ,
     );

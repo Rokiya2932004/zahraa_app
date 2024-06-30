@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import '../widget/IconsStyleforAppBar.dart';
+import '../widget/NotesListView.dart';
 import '../widget/customAppBar.dart';
 
 class FolderScreen extends StatelessWidget {
@@ -8,14 +9,22 @@ class FolderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Stack(
+      body:Column(
         children: [
-          CustomAppBar(text: 'folders'),
-          IconsStyle()
-
+          Stack(
+            children: [
+              CustomAppBar(text: 'folders'),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10),
+                child: IconsStyle(),
+              ),
+            ],
+          ),
+          Expanded(child: NotesListView()),
 
         ],
-      )
+      ),
+
 
 
 

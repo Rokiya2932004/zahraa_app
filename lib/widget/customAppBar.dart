@@ -8,9 +8,8 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Stack(
       children:[
-        Positioned(
-        child: Container(
-          height: 103,
+        Container(
+          height: 110,
           decoration:const ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
@@ -22,14 +21,13 @@ class CustomAppBar extends StatelessWidget {
             shadows: [
               BoxShadow(
                 color: Color(0x63000000),
-                blurRadius: 10,
+                blurRadius: 5,
                 offset: Offset(0, 7),
                 spreadRadius: 0,
               )
             ],
           ),
         ),
-      ),
         Positioned(
           bottom: 15,
         left: 30,
