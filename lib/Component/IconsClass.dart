@@ -60,6 +60,18 @@ class CustomIcons {
     return IconButton(
       onPressed: () {},
       icon: Image.asset('assets/icons/save.png'),
+      iconSize:65 ,
+
+    );
+  }
+  static IconButton photoIcon(Function onPreased) {
+    return IconButton(
+      onPressed: () {
+        onPreased();
+      },
+      icon: Image.asset('assets/icons/photo icon.png'),
+      iconSize:95 ,
+
     );
   }
 }

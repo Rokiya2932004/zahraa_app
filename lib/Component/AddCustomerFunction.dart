@@ -12,7 +12,7 @@ void showCustomAddDialog(BuildContext context){
               width: 340,
               child: Column(
                 children: [
-                  SizedBox(height: 18,),
+                  const SizedBox(height: 18,),
                   TextField(
                     textAlign: TextAlign.right,
                     textDirection: TextDirection.rtl,
@@ -35,21 +35,21 @@ void showCustomAddDialog(BuildContext context){
                         focusedBorder: buildBorder()
                     ),
                   ),
-                  SizedBox(height: 12,),
+                  const SizedBox(height: 12,),
                   CustomCheckBox(textChoosen: 'الكاجوال',),
                   CustomCheckBox(textChoosen: 'السوارية',),
-                  SizedBox(height: 15,),
+                  const SizedBox(height: 15,),
                   ElevatedButton(
                     style:ButtonStyle(
                       shadowColor: MaterialStateProperty.all<Color>(
-                        Color(0x3F000000)
+                          const  Color(0x3F000000)
                       ),
-                        minimumSize: MaterialStateProperty.all(Size(220, 45)),
+                        minimumSize: MaterialStateProperty.all(const Size(220, 45)),
                         backgroundColor: MaterialStateProperty.all(Colors.white),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40),
-                                side: BorderSide(color: Colors.white)
+                                side:const BorderSide(color: Colors.white)
                             )
                         )
                     ) ,
@@ -64,12 +64,9 @@ void showCustomAddDialog(BuildContext context){
                             fontWeight: FontWeight.w400,
                             letterSpacing: 4.80,
                             height: 0.05,
-
-
                         ),
                       )),
-                  SizedBox(height: 12,),
-
+                  const SizedBox(height: 12,),
                 ],
               ),
             ),
