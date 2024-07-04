@@ -26,9 +26,11 @@ class CustomIcons {
     );
   }
 
-  static IconButton archiveIcon() {
+  static IconButton archiveIcon(Function onPreased) {
     return IconButton(
-      onPressed: () {},
+      onPressed: () {
+        onPreased();
+      },
       icon: Image.asset('assets/icons/archive icon.png'),
       iconSize:0.3 ,
 

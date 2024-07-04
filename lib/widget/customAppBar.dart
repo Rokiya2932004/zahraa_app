@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 class CustomAppBar extends StatelessWidget {
   final String text;
   final TextAlign textAlign;
-  final TextDirection textDirection;
+  final TextDirection? textDirection;
 
-  CustomAppBar({required this.text, required this.textAlign ,required this.textDirection,});
+  CustomAppBar({required this.text, required this.textAlign , this.textDirection,});
   @override
   Widget build(BuildContext context) {
     return  Stack(
