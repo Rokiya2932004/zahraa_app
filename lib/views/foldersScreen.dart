@@ -13,7 +13,7 @@ class FolderScreen extends StatelessWidget {
         children: [
           Stack(
             children: [
-              CustomAppBar(text: 'folders'),
+              CustomAppBar(text: 'folders',textAlign: TextAlign.left, textDirection: TextDirection.ltr, ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10),
                 child: IconsStyle(),

@@ -3,7 +3,10 @@ import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
   final String text;
-   CustomAppBar({required this.text });
+  final TextAlign textAlign;
+  final TextDirection textDirection;
+
+  CustomAppBar({required this.text, required this.textAlign ,required this.textDirection,});
   @override
   Widget build(BuildContext context) {
     return  Stack(
@@ -32,6 +35,8 @@ class CustomAppBar extends StatelessWidget {
           bottom: 15,
         left: 30,
         child: Text(
+          textAlign: textAlign,
+          textDirection:textDirection,
         '$text',
         style: const TextStyle(
         color: Colors.black,

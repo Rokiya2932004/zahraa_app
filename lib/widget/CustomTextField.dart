@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomTextField extends StatelessWidget {
+ final Color color;
+  CustomTextField({required this.color});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,18 +17,18 @@ class CustomTextField extends StatelessWidget {
             filled: true,
             fillColor: Colors.white,
             border:buildBorder(),
-            enabledBorder: buildBorder(),
-            focusedBorder: buildBorder()
+            enabledBorder: buildBorder(color),
+            focusedBorder: buildBorder(color)
         ),
       ),
     );
   }
 }
-OutlineInputBorder buildBorder(){
+OutlineInputBorder buildBorder([Color color = Colors.transparent]){
   return OutlineInputBorder(
       borderRadius: BorderRadius.circular(20),
-      borderSide:const BorderSide(
-          color: Colors.black,
+      borderSide: BorderSide(
+          color: color,
         width: 2
       )
   );

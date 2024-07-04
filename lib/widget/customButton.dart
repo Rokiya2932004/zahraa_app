@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 
 class customButton extends StatelessWidget {
   final String name;
-  customButton({required this.name});
+  Function onPreased;
+  customButton({required this.name, required this.onPreased});
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
@@ -17,6 +18,7 @@ class customButton extends StatelessWidget {
               ))
       ),
         onPressed: (){
+          onPreased();
         },
         child: Text(
           '$name',
@@ -31,4 +33,5 @@ class customButton extends StatelessWidget {
         ),
     );
   }
+
 }
