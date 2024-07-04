@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class customButton extends StatelessWidget {
@@ -10,11 +11,11 @@ class customButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
-          minimumSize: MaterialStateProperty.all(Size(113,  54.66)),
+          minimumSize: MaterialStateProperty.all(Size(113.w,  45.h)),
           backgroundColor: MaterialStateProperty.all(Color(0xFF5486E9)),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
+                  borderRadius: BorderRadius.circular(30.r),
               ))
       ),
         onPressed: (){
@@ -23,12 +24,12 @@ class customButton extends StatelessWidget {
         child: Text(
           '$name',
           textAlign: TextAlign.center,
-          style: const TextStyle(
+          style: TextStyle(
             color: Colors.white,
-            fontSize: 36,
+            fontSize: 36.sp,
             fontFamily: 'AlegreyaSC',
             fontWeight: FontWeight.w400,
-            height: 1,
+            height: 1.h,
           ),
         ),
     );

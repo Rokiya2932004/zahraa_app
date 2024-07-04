@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../widget/CustomCheckbox.dart';
 void showCustomAddDialog(BuildContext context){
@@ -8,65 +9,67 @@ void showCustomAddDialog(BuildContext context){
         builder: (BuildContext context){
           return AlertDialog(
             content: Container(
-              height: 270,
-              width: 340,
+              height: 270.h,
+              width: 340.w,
               child: Column(
                 children: [
-                  const SizedBox(height: 18,),
+                   SizedBox(height: 18.h,),
                   TextField(
                     textAlign: TextAlign.right,
                     textDirection: TextDirection.rtl,
                     cursorColor: Colors.black,
                     decoration: InputDecoration(
-                        contentPadding: EdgeInsets.symmetric(horizontal: 16, vertical: 3),
+                        contentPadding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 3.h),
                         hintText: "الأسم",
-                      hintStyle:const TextStyle(
+                      hintStyle: TextStyle(
                         color: Colors.black,
-                        fontSize: 24,
+                        fontSize: 18.sp,
                         fontStyle: FontStyle.italic,
                         fontFamily: 'AlegreyaSC',
                         fontWeight: FontWeight.w400,
-                        height: 0,
                       ),
                       filled: true,
                       fillColor: Colors.white,
-                      border:buildBorder(),
+                        border:InputBorder.none,
                         enabledBorder: buildBorder(),
                         focusedBorder: buildBorder()
                     ),
                   ),
-                  const SizedBox(height: 12,),
+                   SizedBox(height: 12.h,),
                   CustomCheckBox(textChoosen: 'الكاجوال',),
                   CustomCheckBox(textChoosen: 'السوارية',),
-                  const SizedBox(height: 15,),
+                   SizedBox(height: 15.h,),
                   ElevatedButton(
                     style:ButtonStyle(
                       shadowColor: MaterialStateProperty.all<Color>(
                           const  Color(0x3F000000)
                       ),
-                        minimumSize: MaterialStateProperty.all(const Size(220, 45)),
+                        minimumSize: MaterialStateProperty.all( Size(220.w, 45.h)),
                         backgroundColor: MaterialStateProperty.all(Colors.white),
                         shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                             RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40),
+                                borderRadius: BorderRadius.circular(40.r),
                                 side:const BorderSide(color: Colors.white)
                             )
                         )
                     ) ,
                       onPressed: (){},
-                      child:const Text(
-                        "add",
-                        style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 30,
-                            fontStyle: FontStyle.italic,
-                            fontFamily: 'AlegreyaSC',
-                            fontWeight: FontWeight.w400,
-                            letterSpacing: 4.80,
-                            height: 0.05,
+                      child: Padding(
+                        padding:  EdgeInsets.only(top: 15.h),
+                        child: Text(
+                          "add",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 24.sp,
+                              fontStyle: FontStyle.italic,
+                              fontFamily: 'AlegreyaSC',
+                              fontWeight: FontWeight.w400,
+                              letterSpacing: 4.80,
+                              height: 0.05.h,
+                          ),
                         ),
                       )),
-                  const SizedBox(height: 12,),
+                   // SizedBox(height: 12.h,),
                 ],
               ),
             ),
@@ -76,7 +79,7 @@ void showCustomAddDialog(BuildContext context){
 }
 OutlineInputBorder buildBorder(){
   return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(30),
+      borderRadius: BorderRadius.circular(30.r),
       borderSide:const BorderSide(
           color: Colors.white
       )

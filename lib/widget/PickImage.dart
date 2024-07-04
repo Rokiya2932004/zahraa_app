@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'dart:io';
 import 'package:image_picker/image_picker.dart';
 
@@ -26,18 +27,18 @@ class _PickImageState extends State<PickImage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding: EdgeInsets.symmetric(horizontal: 30.w),
       child: Container(
-        width: 400,
-        height: 220,
+        width: 400.w,
+        height: 220.h,
         decoration: ShapeDecoration(
           color: Colors.white,
           shape: RoundedRectangleBorder(
-            side: const BorderSide(
-              width: 2,
+            side:  BorderSide(
+              width: 2.w,
               strokeAlign: BorderSide.strokeAlignOutside,
             ),
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10.r),
           ),
           shadows: const [
             BoxShadow(
@@ -53,14 +54,14 @@ class _PickImageState extends State<PickImage> {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: [
                   CustomIcons.photoIcon(pickphoto),
-                  const Text(
+                   Text(
                     'Choose From Device',
                     style: TextStyle(
                       color: Colors.black,
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontFamily: 'AlegreyaSC',
                       fontWeight: FontWeight.w400,
-                      height: 0.06,
+                      height: 0.06.h,
                     ),
                   ),
                 ],
@@ -74,7 +75,7 @@ class _PickImageState extends State<PickImage> {
                     onTap: () =>
                         AppearImage(context, selectedImages[index].path),
                     child: Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 5),
+                      padding:  EdgeInsets.symmetric(vertical: 5.h),
                       child: Image.file(File(selectedImages[index].path)),
                     ),
                   );

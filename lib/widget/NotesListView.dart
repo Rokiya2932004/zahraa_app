@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'NotesCardDesigin.dart';
 class NotesListView extends StatelessWidget {
@@ -7,9 +8,9 @@ class NotesListView extends StatelessWidget {
     return ListView.builder(
       padding: EdgeInsets.zero,
         itemBuilder: (context,index){
-            return const Padding(
-              padding:  EdgeInsets.symmetric(vertical: 10,horizontal: 15),
-              child: NotesDesignCard(),
+            return  Padding(
+              padding:  EdgeInsets.symmetric(vertical: 10.h,horizontal: 20.w),
+              child: NotesDesignCard(customerName: 'ASIL ALI ASER',),
             );
         });
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTextField extends StatelessWidget {
  final Color color;
@@ -6,30 +7,34 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 30),
+      padding:  EdgeInsets.symmetric(horizontal: 30.w),
       child: TextField(
-        minLines: 8,
+        minLines: 3,
         maxLines: 100,
         textAlign: TextAlign.right,
         textDirection: TextDirection.rtl,
         cursorColor: Colors.black,
+        style: TextStyle(
+          fontSize: 30.sp
+        ),
         decoration: InputDecoration(
             filled: true,
             fillColor: Colors.white,
-            border:buildBorder(),
+            border:InputBorder.none,
             enabledBorder: buildBorder(color),
-            focusedBorder: buildBorder(color)
+            focusedBorder: buildBorder(color),
         ),
+
       ),
     );
   }
 }
 OutlineInputBorder buildBorder([Color color = Colors.transparent]){
   return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(20),
+      borderRadius: BorderRadius.circular(20.r),
       borderSide: BorderSide(
           color: color,
-        width: 2
+        width: 2.w
       )
   );
 }

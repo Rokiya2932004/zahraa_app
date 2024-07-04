@@ -1,19 +1,21 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomContainer extends StatelessWidget {
   final String textname;
   final double width;
   final double high;
-  CustomContainer({required this.textname ,required this.width, required this.high});
+  final double FontSize;
+  CustomContainer({required this.textname ,required this.width, required this.high, required this.FontSize});
   @override
   Widget build(BuildContext context) {
   return Container(
-      width: width,
-      height: high,
+      width: width.w,
+      height: high.h,
       decoration: ShapeDecoration(
         color: Color(0xFF5486E9),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(30),
+          borderRadius: BorderRadius.circular(30.r),
         ),
         shadows:const [
           BoxShadow(
@@ -24,17 +26,19 @@ class CustomContainer extends StatelessWidget {
           )
         ],
       ),
-    child: Text(
-      "$textname",
-      textAlign: TextAlign.center,
-      style: const TextStyle(
-        color: Colors.white,
-        fontSize: 32,
-        fontStyle: FontStyle.italic,
-        fontFamily: 'AlegreyaSC',
-        fontWeight: FontWeight.w400,
-        height: 0,
+    child: Center(
+      child: Text(
+        "$textname",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.white,
+          fontSize: FontSize.sp,
+          fontStyle: FontStyle.italic,
+          fontFamily: 'AlegreyaSC',
+          fontWeight: FontWeight.w400,
+          height: 0.h,
 
+        ),
       ),
     ),
   )

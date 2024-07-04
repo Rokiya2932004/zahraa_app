@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../Component/IconsClass.dart';
 import '../widget/CustomTextField.dart';
-import '../widget/DataInPrice.dart';
+import '../widget/DataForm.dart';
 import '../widget/customAppBar.dart';
 class PriceForm extends StatelessWidget {
   @override
@@ -16,9 +17,9 @@ class PriceForm extends StatelessWidget {
                 children:[
                   CustomAppBar(text: 'price form', textAlign: TextAlign.left, textDirection: TextDirection.ltr,),
                   Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 5),
+                    padding:  EdgeInsets.symmetric(horizontal: 10.w,vertical: 5.h),
                     child: Container(
-                      height: 130,
+                      height: 130.h,
                       alignment: Alignment.centerRight,
                       child: Row(
                           mainAxisAlignment: MainAxisAlignment.end,
@@ -31,13 +32,13 @@ class PriceForm extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                DataInPrice(datainPrice: 'سعر  الخيط',),
-                DataInPrice(datainPrice: 'سعر الكهرباء',),
-                DataInPrice(datainPrice: 'دراي كلين   ',),
-                DataInPrice(datainPrice: 'سعر الشنط',),
-                DataInPrice(datainPrice: 'شغل ايدي',),
-                DataInPrice(datainPrice: 'المواصلات',),
-                SizedBox(height: 25,),
+                DataForm(datainPrice: 'سعر  الخيط',),
+                DataForm(datainPrice: 'سعر الكهرباء',),
+                DataForm(datainPrice: 'دراي كلين   ',),
+                DataForm(datainPrice: 'سعر الشنط',),
+                DataForm(datainPrice: 'شغل ايدي',),
+                DataForm(datainPrice: 'المواصلات',),
+                SizedBox(height: 25.h,),
                 CustomTextField(color: Color(0xFF2868E3),)
               ],
             )
