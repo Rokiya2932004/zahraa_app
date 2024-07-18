@@ -1,26 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 
 class CustomAppBar extends StatelessWidget {
   final String text;
   final TextAlign textAlign;
-  final TextDirection? textDirection;
-  final bool rightAligned;
+  final TextDirection textDirection;
 
-  CustomAppBar({required this.text, required this.textAlign , this.textDirection,this.rightAligned = false,});
+  CustomAppBar({required this.text, required this.textAlign ,required this.textDirection,});
   @override
   Widget build(BuildContext context) {
     return  Stack(
       children:[
         Container(
-          height: 110.h,
-          decoration: ShapeDecoration(
+          height: 110,
+          decoration:const ShapeDecoration(
             color: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(30.r),
-                bottomRight: Radius.circular(30.r),
+                bottomLeft: Radius.circular(30),
+                bottomRight: Radius.circular(30),
               ),
             ),
             shadows: [
@@ -33,26 +31,26 @@ class CustomAppBar extends StatelessWidget {
             ],
           ),
         ),
-        PositionedDirectional(
-          start: rightAligned ? null : 30.w,
-          end: rightAligned ? 30.w : null,
-          bottom: 10.h,
-          child: Align(
-            alignment: rightAligned ? AlignmentDirectional.centerEnd : AlignmentDirectional.centerStart,
-            child: Text(
-              '$text',
-              textAlign: textAlign,
-              textDirection: textDirection,
-              style: TextStyle(
-                color: Colors.black,
-                fontSize: 40.sp,
-                fontStyle: FontStyle.italic,
-                fontFamily: 'AlegreyaSC',
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-          ),
+        Positioned(
+          bottom: 15,
+        left: 30,
+        child: Text(
+          textAlign: textAlign,
+          textDirection:textDirection,
+        '$text',
+        style: const TextStyle(
+        color: Colors.black,
+        fontSize: 40,
+        fontStyle: FontStyle.italic,
+        fontFamily: 'AlegreyaSC',
+        fontWeight: FontWeight.w400,
+          height: 0,
+
         ),
+
+        ),
+      ),
+
 
       ]);
   }
