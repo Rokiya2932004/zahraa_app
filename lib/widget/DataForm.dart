@@ -15,7 +15,7 @@ class DataForm extends StatelessWidget {
         children: [
           Container(
             width: 110.w,
-            height: 40.h,
+            height: 45.h,
             child: StaticText == null
                 ? TextField(
               cursorColor: Colors.black,

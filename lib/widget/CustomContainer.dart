@@ -27,7 +27,7 @@ class CustomContainer extends StatelessWidget {
         ],
       ),
     child: Center(
-      child: Text(
+        child: Text(
         "$textname",
         textAlign: TextAlign.center,
         style: TextStyle(
@@ -36,12 +36,10 @@ class CustomContainer extends StatelessWidget {
           fontStyle: FontStyle.italic,
           fontFamily: 'AlegreyaSC',
           fontWeight: FontWeight.w400,
-          height: 0.h,
-
+          height: 0.6.h
         ),
       ),
     ),
-  )
-  ;
+  );
   }
 }

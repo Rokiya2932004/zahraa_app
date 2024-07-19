@@ -1,4 +1,5 @@
 
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../Component/IconsClass.dart';
@@ -6,7 +7,7 @@ import '../widget/CustomContainer.dart';
 import '../widget/DataForm.dart';
 import '../widget/customAppBar.dart';
 
-class KajwalScreen extends StatelessWidget {
+class SwaryhScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -16,11 +17,11 @@ class KajwalScreen extends StatelessWidget {
           children: [
             Stack(
                 children:[
-                      CustomAppBar(
-                        text: 'الكاجوال',
-                        textAlign: TextAlign.right,
-                        textDirection: TextDirection.rtl,
-                        rightAligned: true,),
+                  CustomAppBar(
+                    text: 'السوارية',
+                    textAlign: TextAlign.right,
+                    textDirection: TextDirection.rtl,
+                    rightAligned: true,),
                   Positioned(
                     left: 10.w,
                     bottom: 10.h,
@@ -35,19 +36,19 @@ class KajwalScreen extends StatelessWidget {
             SizedBox(height: 10.h,),
             Column(
               children: [
-                DataForm(datainPrice: 'دوران الشيست',),
-                DataForm(datainPrice: 'دوران الصدر ',),
+                DataForm(datainPrice: 'دوران الصدر',),
                 DataForm(datainPrice: 'دوران الوسط',),
                 DataForm(datainPrice: 'دوران الهيب',),
-                DataForm(datainPrice: 'عرض الكتف',),
-                DataForm(datainPrice: 'عرض الظهر ',),
-                DataForm(datainPrice: 'الفرق بين نقطتين',),
+                DataForm(datainPrice: 'عرض كتف امامى',),
+                DataForm(datainPrice: 'عرض كتف خلفى',),
+                DataForm(datainPrice: 'شيست امامى',),
+                DataForm(datainPrice: 'شيست خلفى',),
+                DataForm(datainPrice: 'الفرق بين نقطتين ',),
+                DataForm(datainPrice: 'طول الكتف الواحد ',),
+                DataForm(datainPrice: 'طول الصدر ',),
                 DataForm(datainPrice: 'طول الظهر ',),
-                DataForm(datainPrice: 'طول الجنب ',),
-                DataForm(datainPrice: 'طول الصدر لاعلى نقطة',),
-                DataForm(datainPrice: 'طول البلوزة الامام',),
-                DataForm(datainPrice: 'طول البلوزة الخلفي',),
-                DataForm(datainPrice: 'طول الجيبة',),
+                DataForm(datainPrice: 'طول الجنب',),
+                DataForm(datainPrice: 'الطول الكلى',),
               ],
             ),
             SizedBox(height: 5.h,),

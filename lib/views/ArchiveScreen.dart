@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import '../Component/IconsClass.dart';
 import '../widget/customAppBar.dart';
 
 class ArchiveScreen extends StatelessWidget {
@@ -9,15 +11,12 @@ class ArchiveScreen extends StatelessWidget {
         children: [
           Stack(
               children: [
-                CustomAppBar(text: 'Archive',textAlign: TextAlign.center, ),
-               const Positioned(
-                 right: 35,
-                  bottom: 18,
-                  child: Icon(
-                      Icons.archive_outlined,
-                    size: 45,
-                  ),
-                )
+                CustomAppBar(text: 'archive',textAlign: TextAlign.left, textDirection: TextDirection.ltr, ),
+                Positioned(
+                  right: 10.w,
+                  bottom: 20.h,
+                  child: CustomIcons.UNarchiveIcon(context),
+                ),
               ]),
 
         ],
