@@ -12,7 +12,7 @@ class IconsStyleCardNotes extends StatelessWidget {
         children: [
           CustomIcons.inprocessIcon(),
           CustomIcons.cancelIcon(),
-          CustomIcons.doneIcon(),
+          CustomIcons.doneIcon(context),
         ],
       ),
     );

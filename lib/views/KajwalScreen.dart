@@ -48,6 +48,7 @@ class KajwalScreen extends StatelessWidget {
                 DataForm(datainPrice: 'طول البلوزة الامام',),
                 DataForm(datainPrice: 'طول البلوزة الخلفي',),
                 DataForm(datainPrice: 'طول الجيبة',),
+                DataForm(datainPrice: 'الطول الكلى',),
               ],
             ),
             SizedBox(height: 5.h,),
@@ -63,7 +64,7 @@ class KajwalScreen extends StatelessWidget {
                 DataForm(datainPrice: 'دوران الاسورة الصغرى',),
                 DataForm(datainPrice: 'طول الكوع',),
                 DataForm(datainPrice: 'طول الكم',),
-                DataForm(datainPrice: 'راسم الكم ',StaticText: ' ١٣ سم ')
+                DataForm(datainPrice: 'راسم الكم ')
               ],
             ),
             SizedBox(height: 10.h,),

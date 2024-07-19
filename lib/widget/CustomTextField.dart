@@ -9,13 +9,13 @@ class CustomTextField extends StatelessWidget {
     return Padding(
       padding:  EdgeInsets.symmetric(horizontal: 30.w),
       child: TextField(
-        minLines: 3,
+        minLines: 5,
         maxLines: 100,
         textAlign: TextAlign.right,
         textDirection: TextDirection.rtl,
         cursorColor: Colors.black,
         style: TextStyle(
-          fontSize: 30.sp
+          fontSize: 18.sp
         ),
         decoration: InputDecoration(
             filled: true,

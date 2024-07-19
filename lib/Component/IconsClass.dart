@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import '../views/ArchiveScreen.dart';
 import '../views/foldersScreen.dart';
 import 'AddCustomerFunction.dart';
 
@@ -11,6 +12,10 @@ class CustomIcons {
 
   static void _toFolderScreen(BuildContext context) {
     Navigator.push(context, MaterialPageRoute(builder: (context) => FolderScreen()));
+  }
+
+  static void toArchiveScreen(BuildContext context){
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>ArchiveScreen()));
   }
 
   double _calculateIconSize() {
@@ -84,10 +89,12 @@ class CustomIcons {
     );
   }
 
-  static IconButton doneIcon() {
+  static IconButton doneIcon(BuildContext context) {
     double iconSize = CustomIcons()._calculateIconSize();
     return IconButton(
-      onPressed: () {},
+      onPressed: () {
+        toArchiveScreen(context);
+      },
       icon: Image.asset('assets/icons/doneicon.png'),
       iconSize: iconSize,
     );

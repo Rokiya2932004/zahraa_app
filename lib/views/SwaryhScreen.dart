@@ -49,6 +49,8 @@ class SwaryhScreen extends StatelessWidget {
                 DataForm(datainPrice: 'طول الظهر ',),
                 DataForm(datainPrice: 'طول الجنب',),
                 DataForm(datainPrice: 'الطول الكلى',),
+                DataForm(datainPrice: 'الطول الكلى الامامي',),
+                DataForm(datainPrice: 'الطول الكلى الخلفي',),
               ],
             ),
             SizedBox(height: 5.h,),
@@ -64,7 +66,7 @@ class SwaryhScreen extends StatelessWidget {
                 DataForm(datainPrice: 'دوران الاسورة الصغرى',),
                 DataForm(datainPrice: 'طول الكوع',),
                 DataForm(datainPrice: 'طول الكم',),
-                DataForm(datainPrice: 'راسم الكم ',StaticText: ' ١٣ سم ')
+                DataForm(datainPrice: 'راسم الكم ')
               ],
             ),
             SizedBox(height: 10.h,),

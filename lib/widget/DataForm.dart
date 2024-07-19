@@ -16,8 +16,9 @@ class DataForm extends StatelessWidget {
           Container(
             width: 110.w,
             height: 45.h,
-            child: StaticText == null
-                ? TextField(
+            child:
+            // StaticText == null
+                 TextField(
               cursorColor: Colors.black,
               decoration: InputDecoration(
                 filled: true,
@@ -27,29 +28,6 @@ class DataForm extends StatelessWidget {
                 focusedBorder: buildBorder(),
               ),
             )
-                : Container(
-              padding: EdgeInsets.symmetric( horizontal: 10.w),
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20.r),
-                border: Border.all(
-                  color: Color(0xFF2868E3),
-                  width: 3.w,
-                ),
-              ),
-              child: Center(
-                child: Text(
-                  StaticText!,
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 18.sp,
-                    fontWeight: FontWeight.bold,
-
-
-                  ),
-                ),
-              ),
-            ),
           ),
           Text(
             '$datainPrice',
@@ -79,3 +57,33 @@ OutlineInputBorder buildBorder(){
       )
   );
 }
+
+
+
+
+
+
+
+
+
+//     : Container(
+//   padding: EdgeInsets.symmetric( horizontal: 10.w),
+//   decoration: BoxDecoration(
+//     color: Colors.white,
+//     borderRadius: BorderRadius.circular(20.r),
+//     border: Border.all(
+//       color: Color(0xFF2868E3),
+//       width: 3.w,
+//     ),
+//   ),
+//   child: Center(
+//     child: Text(
+//       StaticText!,
+//       style: TextStyle(
+//         color: Colors.black,
+//         fontSize: 18.sp,
+//         fontWeight: FontWeight.bold,
+//       ),
+//     ),
+//   ),
+// ),
