@@ -9,13 +9,14 @@ import '../widget/customAppBar.dart';
 import '../widget/customButton.dart';
 import 'PriceScreen.dart';
 import 'KajwalScreen.dart';
+import 'SwaryhScreen.dart';
 
 class ClintPage extends StatelessWidget {
    void toPriceScreen(BuildContext context){
     Navigator.push(context, MaterialPageRoute(builder: (context)=>PriceForm()));
   }
    void toSizeScreen(BuildContext context){
-    Navigator.push(context, MaterialPageRoute(builder: (context)=>KajwalScreen()));
+    Navigator.push(context, MaterialPageRoute(builder: (context)=>SwaryhScreen()));
   }
   @override
   Widget build(BuildContext context) {
@@ -49,15 +50,15 @@ class ClintPage extends StatelessWidget {
             ),
             SizedBox(height: 20.h,),
             Padding(
-              padding:  EdgeInsets.only(right: 200.w),
-              child: CustomContainer(textname: 'photo', width: 106.w, high: 45.h, FontSize: 28.sp,),
+              padding:  EdgeInsets.only(right: 200.w,left: 15.w),
+              child: CustomContainer(textname: 'photo', width: 106.w, high: 42.h, FontSize: 24.sp,),
             ),
              SizedBox(height: 20.h,),
             PickImage(),
              SizedBox(height: 20.h,),
             Padding(
-              padding:  EdgeInsets.only(right: 200.w),
-              child: CustomContainer(textname: 'notes', width: 90.w, high: 45.h, FontSize: 28.sp,),
+              padding:  EdgeInsets.only(right: 200.w,left: 15.w),
+              child: CustomContainer(textname: 'notes', width: 90.w, high: 42.h, FontSize: 24.sp,),
             ),
              SizedBox(height: 20.h,),
             CustomTextField(color: Color(0xFF000000),),

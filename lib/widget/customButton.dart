@@ -11,7 +11,7 @@ class customButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ButtonStyle(
-          minimumSize: MaterialStateProperty.all(Size(113.w,  45.h)),
+          minimumSize: MaterialStateProperty.all(Size(113.w,  20.h)),
           backgroundColor: MaterialStateProperty.all(Color(0xFF5486E9)),
           shape: MaterialStateProperty.all<RoundedRectangleBorder>(
               RoundedRectangleBorder(
@@ -29,7 +29,6 @@ class customButton extends StatelessWidget {
             fontSize: 36.sp,
             fontFamily: 'AlegreyaSC',
             fontWeight: FontWeight.w400,
-            height: 1.h,
           ),
         ),
     );
